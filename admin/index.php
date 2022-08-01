@@ -1,1 +1,3 @@
-ADMIN
+<?php
+   include 'navbar.php';
+?>
