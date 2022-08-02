@@ -33,7 +33,7 @@
 <div class="container w-50 mt-5">
     <div class="card">
         <div class="card-header bg-success text-white">
-            เพิ่มข้อมูล User
+            เพิ่มข้อมูล Product
         </div>
         <div class="card-body">
             <form action="<?php $_SERVER['PHP_SELF']?>" method="POST">
