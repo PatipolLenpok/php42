@@ -28,8 +28,8 @@
          <td><?php echo $row['Username']?></td>
          <td><?php echo $row['Email']?></td>
          <td>
-            <a href="edit_user.php" class="btn btn-warning"><i  class="bi bi-pencil-square"></i></a>
-            <a href="del_user.php" class="btn btn-danger" ><i  class="bi bi-x-circle"></i></a>
+            <a href="edit_user.php?username=<?php echo $row['Username']?>" class="btn btn-warning"><i  class="bi bi-pencil-square"></i></a>
+            <a href="del_user.php?username=<?php echo $row['Username']?>" class="btn btn-danger" onclick="return confirm('ยืนยันการลบหรือไม่')"><i  class="bi bi-x-circle"></i></a>
          </td>
       </tr>
       <?php }?>

@@ -13,6 +13,7 @@
       <th class="text-white">ชื่อสินค้า</th>
       <th class="text-white">ราคาสินค้า</th>
       <th class="text-white">จำนวน</th>
+      <th class="text-white">การจัดการ</th>
       </tr>
       <?php
          $count=1; 
@@ -26,6 +27,10 @@
          <td><?php echo $row['pro_name']?></td>
          <td><?php echo $row['pro_price']?></td>
          <td><?php echo $row['pro_qty']?></td>
+         <td>
+            <a href="edit_product.php?pro_id=<?php echo $row['pro_id']?>" class="btn btn-warning"><i  class="bi bi-pencil-square"></i></a>
+            <a href="del_product.php?pro_id=<?php echo $row['pro_id']?>" class="btn btn-danger" onclick="return confirm('ยืนยันการลบหรือไม่')"><i  class="bi bi-x-circle"></i></a>
+         </td>
       </tr>
       <?php }?>
    </table>
