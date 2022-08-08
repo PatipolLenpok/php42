@@ -7,7 +7,7 @@
         $name=$_POST['name'];
         $email=$_POST['email'];
         $filename=$_FILES['user_pic']['name'];
-        if($username=="" || $password=="" || $name=="" || $email=="")
+        if($username=="" || $password=="" || $name=="" || $email=="" || $filename="")
         {
             echo "<script>alert('ยังไม่ได้กรอกข้อมูล หรือ กรอกข้อมูลไม่ครบ')</script>";
         }else{
@@ -17,14 +17,15 @@
             if($num==1){
                 echo "<script>alert('username นี้มีอยู่แล้ว')</script>";
             }else{
-                if(move_uploaded_file($_FILES['user_pic']['tmp_name'],'user_pic/'.$filename)){
+                if(move_uploaded_file($_FILES['user_pic']['tmp_name'],'user_pic/'.$filename))
+                {
                     $sql="INSERT INTO user (Username,Password,Name,Email,User_pic) VALUES('$username','$password','$name','$email','$filename')";
                     $result=$con->query($sql);
                     if(!$result){
-                    echo "<script>('ไม่สามารถเพิ่มข้อมูลได้')</script)";
+                        echo "<script>('ไม่สามารถเพิ่มข้อมูลได้')</script)";
                         }
                     else{
-                echo "<script>window.location.href='user.php'</script>";
+                        echo "<script>window.location.href='user.php'</script>";
                         }
                 }
                 
