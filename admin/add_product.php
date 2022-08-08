@@ -6,7 +6,7 @@
         $pro_price=$_POST['pro_price'];
         $pro_qty=$_POST['pro_qty'];
         $filename=$_FILES['pro_pic']['name'];
-        if($pro_name=="" || $pro_price=="" || $pro_qty=="" || $filename="")
+        if($pro_name=="" || $pro_price=="" || $pro_qty=="" || $filename=="")
         {
             echo "<script>alert('ยังไม่ได้กรอกข้อมูล หรือ กรอกข้อมูลไม่ครบ')</script>";
         }else{
