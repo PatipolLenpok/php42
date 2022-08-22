@@ -6,7 +6,26 @@
    
 ?>
 <div class="container mt-5 w-75">
-   <a href="add_product.php" class="btn btn-primary mb-3">+เพิ่มข้อมูล</a>
+   <div class="row">
+        <div class="col-4">
+            <a href="add_user.php" class="btn btn-primary mb-3">+เพิ่มข้อมูล</a>
+        </div>
+        <div class="col-8">
+            <form action="user_uploadcsv.php" method="POST" enctype="multipart/form-data">
+            <div class="row">
+            <div class="col-3">
+                    <label for="" class="">อัพโหลดโหลดไฟล์</label>
+                </div>
+                <div class="col-5">
+                    <input type="file" class="form-control" class="mb-3" name="csv_file">
+                </div>
+                <div class="col-4">
+                    <input type="submit" name="addm" class="btn btn-primary mb-3" value="+เพิ่มข้อมูลที่ละหลายคน">
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
    <table class="table table-striped">
       <tr class="bg-success">
       <th class="text-white">รหัสสินค้า</th>
