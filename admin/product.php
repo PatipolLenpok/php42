@@ -11,7 +11,7 @@
             <a href="add_user.php" class="btn btn-primary mb-3">+เพิ่มข้อมูล</a>
         </div>
         <div class="col-8">
-            <form action="user_uploadcsv.php" method="POST" enctype="multipart/form-data">
+            <form action="product_uploadcsv.php" method="POST" enctype="multipart/form-data">
             <div class="row">
             <div class="col-3">
                     <label for="" class="">อัพโหลดโหลดไฟล์</label>
